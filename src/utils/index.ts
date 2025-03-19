@@ -5,7 +5,7 @@ import path from 'node:path'
  * 获取当前所在的文件夹名称
  */
 export const getCurrentDirectoryName = (): string => {
-    return process.cwd().split('/').pop() as string
+	return process.cwd().split('/').pop() as string
 }
 
 /**
@@ -13,7 +13,7 @@ export const getCurrentDirectoryName = (): string => {
  * @param dir
  */
 export const checkDirExist = (dir: string): boolean => {
-    return fs.existsSync(dir)
+	return fs.existsSync(dir)
 }
 
 /**
@@ -21,7 +21,7 @@ export const checkDirExist = (dir: string): boolean => {
  * @param projectName
  */
 export const isValidPackageName = (projectName: string): boolean => {
-    return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(projectName)
+	return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(projectName)
 }
 
 /**
@@ -29,20 +29,20 @@ export const isValidPackageName = (projectName: string): boolean => {
  * @param projectPath
  */
 export const createProjectDirectory = (projectPath: string) => {
-    if (fs.existsSync(projectPath)) {
-        for (const filename of fs.readdirSync(projectPath)) {
-            if (filename === '.git') {
-                continue
-            }
+	if (fs.existsSync(projectPath)) {
+		for (const filename of fs.readdirSync(projectPath)) {
+			if (filename === '.git') {
+				continue
+			}
 
-            const fullPath = path.resolve(projectPath, filename)
-            if (fs.lstatSync(fullPath).isDirectory()) {
-                fs.rmSync(fullPath, { recursive: true })
-            } else {
-                fs.unlinkSync(fullPath)
-            }
-        }
-    } else {
-        fs.mkdirSync(projectPath, { recursive: true })
-    }
+			const fullPath = path.resolve(projectPath, filename)
+			if (fs.lstatSync(fullPath).isDirectory()) {
+				fs.rmSync(fullPath, { recursive: true })
+			} else {
+				fs.unlinkSync(fullPath)
+			}
+		}
+	} else {
+		fs.mkdirSync(projectPath, { recursive: true })
+	}
 }
