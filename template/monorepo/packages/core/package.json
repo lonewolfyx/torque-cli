@@ -1,0 +1,13 @@
+{
+	"name": "@xxx/core",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "",
+	"scripts": {
+		"test": "tsx src/index.ts",
+		"build": "unbuild"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT"
+}
