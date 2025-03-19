@@ -22,13 +22,13 @@
 		"dist",
 		"template"
 	],
-	"homepage": "https://github.com/lonewolfyx/torque-cli",
+	"homepage": "https://github.com/lonewolfyx/create",
 	"bugs": {
-		"url": "https://github.com/lonewolfyx/torque-cli/issues"
+		"url": "https://github.com/lonewolfyx/create/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/lonewolfyx/torque-cli.git"
+		"url": "git+https://github.com/lonewolfyx/create.git"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org",
