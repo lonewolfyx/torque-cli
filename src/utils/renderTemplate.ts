@@ -29,7 +29,7 @@ export const renderTemplate = (src: string, dest: string) => {
 	const filename = path.basename(src)
 
 	// 合并两个 package.json 文件内容，并且排序
-	if (filename === 'package.json') {
+	if (filename === 'package.json' && !src.includes('packages')) {
 		const existing = JSON.parse(fs.readFileSync(src, 'utf8'))
 		const newPackage = JSON.parse(fs.readFileSync(dest, 'utf8'))
 		const pkg = sortPackageJson(deepMerge(existing, newPackage))
