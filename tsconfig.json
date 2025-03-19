@@ -1,0 +1,21 @@
+{
+    "extends": "@lonewolfyx/tsconfig/tsconfig.lib.json",
+    "compilerOptions": {
+        "composite": false,
+        "baseUrl": "./",
+        "lib": [
+            "es2023"
+        ],
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "@lonewolfyx/create",
+    "version": "0.0.0",
+    "type": "module",
+    "bin": {
+        "create": "./dist/index.js"
+    },
+    "keywords": [
+        "create",
+        "cli",
+        "torque-cli"
+    ],
+    "author": "lonewolfyx <olddrivero.king@qq.com>",
+    "license": "MIT",
+    "description": "quickly create a ts library or ts monorepo for a cli tools",
+    "scripts": {
+        "dev": "tsup --watch"
+    },
+    "files": [
+        "dist",
+        "template"
+    ],
+    "homepage": "https://github.com/lonewolfyx/torque-cli",
+    "bugs": {
+        "url": "https://github.com/lonewolfyx/torque-cli/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lonewolfyx/torque-cli.git"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    },
+    "devDependencies": {
+        "@lonewolfyx/tsconfig": "^0.0.5",
+        "@types/fs-extra": "^11.0.4",
+        "@types/node": "^22.13.10",
+        "@types/prompts": "^2.4.9",
+        "kleur": "^4.1.5",
+        "prettier": "^3.5.3",
+        "prettier-plugin-multiline-arrays": "^4.0.3",
+        "tinyexec": "^1.0.0",
+        "tsup": "^8.4.0",
+        "tsx": "^4.19.3",
+        "typescript": "^5.8.2"
+    },
+    "dependencies": {
+        "cac": "^6.7.14",
+        "commander": "^13.1.0",
+        "prompts": "^2.4.2"
+    }
+}
