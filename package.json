@@ -14,7 +14,9 @@
     "license": "MIT",
     "description": "quickly create a ts library or ts monorepo for a cli tools",
     "scripts": {
-        "dev": "tsup --watch"
+        "dev": "tsup --watch",
+        "build": "tsup",
+        "format": "prettier --write ./"
     },
     "files": [
         "dist",
